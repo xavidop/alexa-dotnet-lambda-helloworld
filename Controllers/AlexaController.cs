@@ -11,7 +11,6 @@ using alexa_dotnet_lambda_helloworld.BusinessLogic;
 
 namespace alexa_dotnet_lambda_helloworld.Controllers
 {
-    // GET: /<controller>/
     [Produces("application/json")]
     [Route("api/alexa")]
     public class AlexaController : Controller
