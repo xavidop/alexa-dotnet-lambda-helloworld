@@ -5,7 +5,17 @@
     <AWSProjectType>Lambda</AWSProjectType>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="locales\locales.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="locales\locales.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Alexa.NET" Version="1.13.0" />
+    <PackageReference Include="Alexa.NET.RequestHandlers" Version="4.1.1" />
+    <PackageReference Include="libc.translation" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="AWSSDK.S3" Version="3.3.110.12" />
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.100.1" />

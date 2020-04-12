@@ -23,7 +23,7 @@ namespace alexa_dotnet_lambda_helloworld.Controllers
             var context = (ILambdaContext)Request.HttpContext.Items[APIGatewayProxyFunction.LAMBDA_CONTEXT];
 
             AlexaRequestProcessor alexaRequestProcessor = new AlexaRequestProcessor();
-            SkillResponse resp = alexaRequestProcessor.Process(request);
+            SkillResponse resp = await alexaRequestProcessor.ProcessAsync(request);
 
 
             return Ok(resp);

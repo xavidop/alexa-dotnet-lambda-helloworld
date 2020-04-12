@@ -26,10 +26,10 @@ namespace alexa_dotnet_lambda_helloworld
     /// </summary>
     public class Function
     {
-        public SkillResponse FunctionHandler(SkillRequest input, ILambdaContext context)
+        public async Task<SkillResponse> FunctionHandler(SkillRequest input, ILambdaContext context)
         {
             AlexaRequestProcessor alexaRequestProcessor = new AlexaRequestProcessor();
-            return alexaRequestProcessor.Process(input);
+            return await alexaRequestProcessor.ProcessAsync(input);
         }
     }
 }
